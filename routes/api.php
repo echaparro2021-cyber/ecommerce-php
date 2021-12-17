@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductApiController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SaleApiController;
 use App\Http\Controllers\SaleDetailApiController;
+use App\Http\Controllers\SellerApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,6 +25,7 @@ use App\Http\Controllers\SaleDetailApiController;
 Route::post('product', [ProductApiController::class, 'store']);
 Route::post('sale', [SaleApiController::class, 'store']);
 Route::post('sale_detail', [SaleDetailApiController::class, 'store']);
+Route::post('seller', [SellerApiController::class, 'store']);
 Route::get('product', [ProductApiController::class, 'index']);
 Route::get('product/{id}', [ProductApiController::class, 'getById']);
 
