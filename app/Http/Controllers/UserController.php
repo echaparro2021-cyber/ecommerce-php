@@ -16,7 +16,7 @@ class UserController extends Controller
     Client secret: qCV3HTJTGWr1xVj2vocHmMWTojcc3VfAc9xU2Sxn
     */
 
-    const SELLER_ROL = 2;
+    const SELLER_ROL = 1;
     const DEFAULT_PASSWORD = '123456789';
 
     public function __construct()
