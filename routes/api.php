@@ -26,6 +26,7 @@ Route::post('product', [ProductApiController::class, 'store']);
 Route::post('sale', [SaleApiController::class, 'store']);
 Route::post('sale_detail', [SaleDetailApiController::class, 'store']);
 Route::post('seller', [SellerApiController::class, 'store']);
+Route::get('seller', [SellerApiController::class, 'index']);
 Route::get('product', [ProductApiController::class, 'index']);
 Route::get('product/{id}', [ProductApiController::class, 'getById']);
 

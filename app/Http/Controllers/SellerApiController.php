@@ -17,4 +17,11 @@ class SellerApiController extends Controller
 
         return response()->json($seller, 201);
     }
+
+    public function index(Request $request){
+        
+        $seller = Seller::with([])->get();
+
+        return response()->json($seller, 200);
+    }
 }
