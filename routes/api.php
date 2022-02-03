@@ -7,6 +7,8 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SaleApiController;
 use App\Http\Controllers\SaleDetailApiController;
 use App\Http\Controllers\SellerApiController;
+use App\Http\Controllers\OrderApiController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,12 +25,20 @@ use App\Http\Controllers\SellerApiController;
 });*/
 
 Route::post('product', [ProductApiController::class, 'store']);
+
 Route::post('sale', [SaleApiController::class, 'store']);
+
 Route::post('sale_detail', [SaleDetailApiController::class, 'store']);
+
 Route::post('seller', [SellerApiController::class, 'store']);
+
 Route::get('seller', [SellerApiController::class, 'index']);
+
 Route::get('product', [ProductApiController::class, 'index']);
+
 Route::get('product/{id}', [ProductApiController::class, 'getById']);
+
+Route::post('order', [OrderApiController::class, 'guardar_orden']);
 
 Route::post('oauth/token', 'Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
 

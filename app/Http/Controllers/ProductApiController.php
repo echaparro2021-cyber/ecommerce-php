@@ -29,6 +29,8 @@ class ProductApiController extends Controller
         return response()->json($product, 200);
     }
 
+    //Crear un producto con el input de de la API
+
     public function store(Request $request){
         $product = Product::create([
             'name' => $request->input('name'),
